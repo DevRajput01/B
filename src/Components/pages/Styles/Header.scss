@@ -1,0 +1,206 @@
+.header {
+  background-color: #1a1a1a;
+  color: #f1f1f1;
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  &__content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0.5rem;
+    }
+
+    @media (max-width: 480px) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 1rem;
+    }
+  }
+
+  &__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+
+    a {
+      color: #f1f1f1;
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #ffd700;
+      }
+    }
+  }
+
+  &__toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    justify-content: space-between;
+    color: #fad505;
+
+    @media (max-width: 768px) {
+      display: block;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+
+    &.open {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #1a1a1a;
+      padding: 1rem 0;
+      width: 100%;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      z-index: 999;
+      border-top: 1px solid #333;
+    }
+
+    &-list {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      @media (max-width: 480px) {
+        gap: 0.5rem;
+      }
+    }
+
+    &-item {
+      position: relative;
+
+      a {
+        color: #f1f1f1;
+        text-decoration: none;
+        font-size: 1rem;
+        transition: color 0.3s ease, background-color 0.3s ease, padding 0.3s ease, border-radius 0.3s ease;
+
+        &:hover {
+          color: #ffd700;
+          background-color: rgba(255, 255, 255, 0.1);
+          padding: 10px;
+          border-radius: 10px;
+
+          &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            height: 2px;
+            width: 100%;
+            background-color: #ffd700;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+          }
+        }
+
+        &:hover::after {
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+
+  &__nav-spacing {
+    height: 1rem; // Add space between nav-list and social links/resume section
+    @media (min-width: 769px) {
+      width: 2rem;
+    }
+  }
+
+  &__nav-spacing2 {
+    height: 1rem; // Add space between nav-list and social links/resume section
+    @media (min-width: 769px) {
+      width: 5rem;
+    }
+  }
+
+  &__social {
+    display: flex;
+    gap: 1rem;
+
+    @media (max-width: 768px) {
+      margin-top: 1rem;
+      justify-content: center;
+    }
+
+    a {
+      font-size: 1.5rem;
+      color: #f1f1f1;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #ffd700;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  &__cta {
+    margin-top: 1rem;
+
+    @media (max-width: 768px) {
+      margin-top: 1rem;
+    }
+
+    &-button {
+      background-color: #ffd700;
+      color: #1a1a1a;
+      padding: 0.5rem 1.5rem;
+      border-radius: 2rem;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+
+      &:hover {
+        background-color: #1a1a1a;
+        color: #ffd700;
+        transform: scale(1.05);
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.7), 0 0 20px rgba(255, 215, 0, 0.5);
+      }
+
+      @media (max-width: 480px) {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

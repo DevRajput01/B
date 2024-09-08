@@ -1,0 +1,100 @@
+body {
+    background-color: #000;
+    color: #fff; 
+    font-family: 'Roboto', sans-serif; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .Container {
+    padding: 2rem;
+  }
+  .sendBtn {
+    background-color: #ffcc00 !important;
+    color: #000000 !important;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  
+    &:hover {
+      background-color: #000 !important;
+      color: #ffcc00 !important;
+      box-shadow: 0px 0px 15px 5px rgba(255, 223, 0, 0.6) !important;
+      border-radius: 20px;
+    }
+  
+    &:focus {
+      outline: none !important;
+      box-shadow: 0 0 10px 2px rgba(255, 223, 0, 0.8) !important;
+    }
+  }
+  
+  
+.cont-box {
+    background-color: #000; 
+    color: #fff; 
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 5px rgba(255, 223, 0, 0.6); 
+    transition: box-shadow 0.3s ease-in-out;
+    
+    &:hover {
+      box-shadow: 0px 0px 20px 10px rgba(255, 223, 0, 0.9); 
+    }
+  }
+
+  .cont-heading {
+    color: #ffdf00; 
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .cont-para {
+    margin-bottom: 2rem;
+    text-align: justify;
+    font-size: 1.1rem;
+    color:#838181 ;
+  }
+  
+  .social-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .social-Icon-box {
+    color: #ffdf00; 
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+  
+    &:hover {
+      transform: scale(1.2); 
+    }
+  }
+  
+  form {
+    .MuiInputBase-root {
+      background-color: #333; 
+      color: #fff;
+    }
+  
+    .MuiOutlinedInput-notchedOutline {
+      border-color: #ffdf00; 
+    }
+  
+    .MuiInputLabel-root {
+      color: #ffdf00; 
+    }
+  
+    .MuiButton-root {
+      background-color: #ffdf00;
+      color: #000;
+  
+      &:hover {
+        background-color: #ffcc00; 
+      }
+    }
+  }
+  
